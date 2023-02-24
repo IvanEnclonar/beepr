@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.buttonContainer {
+  display: grid;
+  place-items: center;
+  transition: 0.3s;
+  padding: 4px;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.buttonContainer:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}

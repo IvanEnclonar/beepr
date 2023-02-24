@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 3px;
+}
+
+.logo {
+    font-size: 40px;
+    font-family: 'Berkshire Swash';
+}
+
+.button {
+    display: grid;
+    place-items: center;
+    transition: 0.3s;
+    padding: 4px;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
