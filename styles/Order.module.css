@@ -1,0 +1,56 @@
+.container {
+    border-radius: 8px;
+    width: 335px;
+    min-height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    background-color: white;
+}
+
+.title {
+    font-family: "Poppins";
+    font-size: 27px;
+    width: 95%;
+}
+
+.descripion {
+    font-family: "Poppins";
+    font-size: 15px;
+    width: 90%;
+    text-indent: 50px;
+    padding: 0px;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 90%;
+    padding: 5px 5%;
+}
+
+.background {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swipeSymbolLeft {
+    position: absolute;
+    left: 10px;
+    z-index: -10;
+}
+
+.swipeSymbolRight {
+    position: absolute;
+    right: 10px;
+    z-index: -10;
+}
