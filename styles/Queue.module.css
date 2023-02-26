@@ -44,3 +44,37 @@
     border: 1px solid black;
     color: black;
 }
+
+.formContainer {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    display: grid;
+    place-items: center;
+    border: 1px solid black;
+}
+
+.formMask {
+    background-color: rgba(0, 0, 0, 0.356);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 0px;
+}
+
+.formBody {
+    background-color: white;
+    width: 360px;
+    border-radius: 5px;
+    height: 500px;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formClose {
+    display: none;
+}
