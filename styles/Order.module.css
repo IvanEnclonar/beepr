@@ -1,7 +1,13 @@
+.background {
+    padding: 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container {
     border-radius: 8px;
-    width: 335px;
-    min-height: 200px;
+    width: 365px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
     transition: 0.3s;
     position: relative;
@@ -10,35 +16,48 @@
     align-items: center;
     justify-content: space-between;
     background-color: white;
+    margin: 0px;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .title {
     font-family: "Poppins";
-    font-size: 27px;
-    width: 95%;
+    font-size: 33px;
+    width: 70%;
+    margin-left: 10px;
 }
 
 .descripion {
     font-family: "Poppins";
-    font-size: 15px;
+    font-size: 18px;
     width: 90%;
     text-indent: 50px;
     padding: 0px;
+    margin-top: 15px;
 }
 
-.buttonsContainer {
+.buttonsContainerOnline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: 5px auto 3px;
+}
+
+.buttonsContainerOffline {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: 90%;
-    padding: 5px 5%;
-}
-
-.background {
-    padding: 20px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 95%;
+    margin: 5px auto 3px;
 }
 
 .swipeSymbolLeft {
@@ -52,4 +71,56 @@
     position: absolute;
     right: 10px;
     z-index: -10;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+}
+
+.mask {
+    background-color: rgba(26, 26, 26, 0.155);
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.menuContent {
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.233);
+    background-color: white;
+    border-radius: 8px;
+    min-width: 140px;
+}
+
+.menuOption {
+    font-family: "Poppins";
+    font-size: 22px;
+    text-align: center;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    min-height: 30px;
+    border-radius: 8px;
+}
+
+.menuBottom {
+    display: grid;
+    place-items: center;
+    color: rgb(58, 58, 58);
+    min-height: 30px;
+    border-radius: 8px;
+}
+
+.menuOption:hover {
+    background-color: rgb(249, 249, 249);
+}
+
+.menuBottom:hover {
+    background-color: rgb(249, 249, 249);
+}
+
+.none {
+    display: none;
 }

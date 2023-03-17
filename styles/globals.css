@@ -13,7 +13,6 @@
   border-radius: 50%;
   transition: 0.3s;
   cursor: pointer;
-  margin-right: 5px;
 }
 
 .buttonContainer:hover {
