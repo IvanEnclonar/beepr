@@ -2,18 +2,22 @@ import styles from '@/styles/Queue.module.css'
 import MenuIcon from '@mui/icons-material/Menu'
 import QrCodeIcon from '@mui/icons-material/QrCode'
 import { useState } from 'react';
-import Order from '../../components/order'
+import Order from '../../../components/order'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import ClearIcon from '@mui/icons-material/Clear'
-import Image from 'next/image'
-
+import { useRouter } from "next/router"
 
 
 export default function index() {
     const [openForm, setOpenForm] = useState(false);
     const [openQR, setOpenQR] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
+    const router = useRouter();
+
+    console.log("ID: ", router.query.queues);
+
+
 
     return (
         <div>

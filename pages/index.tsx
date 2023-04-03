@@ -6,11 +6,26 @@ import { useState } from 'react'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import ClearIcon from '@mui/icons-material/Clear'
+import { db } from '../util/firebase'
 
 export default function Home() {
   const [form, setForm] = useState(false);
+  const [queueName, setQueueName] = useState("");
 
-  let n: number;
+
+  const addQueue = () => {
+    db.collection("user312903").doc(queueName).set({
+      name: queueName,
+    })
+      .then(() => {
+        console.log("Document successfully written!");
+      })
+      .catch((error) => {
+        console.error("Error writing document: ", error);
+      });
+  }
+
+
 
 
   return (
@@ -27,6 +42,8 @@ export default function Home() {
           <AddIcon sx={{ fontSize: 150 }} />
           <div className={styles.cardText}>Create</div>
         </div>
+
+        {/* Queue Name form */}
         <div className={form ? styles.openForm : styles.closeForm}>
           <div className={styles.mask} onClick={() => { setForm(!form) }}></div>
           <div className={styles.formBody}>
@@ -36,9 +53,9 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.formInput}>
-              <TextField fullWidth id="outlined-basic" label="Queue Name" variant="outlined" />
+              <TextField fullWidth id="outlined-basic" label="Queue Name" variant="outlined" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { setQueueName(e.target.value) }} />
             </div>
-            <Button variant="contained" className={styles.formButton}>Submit</Button>
+            <Button variant="contained" className={styles.formButton} onClick={() => { addQueue() }}>Submit</Button>
           </div>
         </div>
       </main>
