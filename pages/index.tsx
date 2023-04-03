@@ -5,11 +5,13 @@ import AddIcon from '@mui/icons-material/Add'
 import { useState } from 'react'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
-import ClearIcon from '@mui/icons-material/Clear'
 import { db } from '../util/firebase'
+import ClearIcon from '@mui/icons-material/Clear'
+import Menu from '../components/menu'
 
 export default function Home() {
   const [form, setForm] = useState(false);
+  const [menu, setMenu] = useState(false);
   const [queueName, setQueueName] = useState("");
 
 
@@ -36,12 +38,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <Navbar />
+        <Navbar setMenu={setMenu} menu={menu} />
         <h2 className={styles.mainText}>Create a queue and notis people!</h2>
         <div className={styles.card} onClick={() => { setForm(!form) }}>
           <AddIcon sx={{ fontSize: 150 }} />
           <div className={styles.cardText}>Create</div>
         </div>
+
+
+        {/* Menu Form */}
+        {menu && <Menu setMenu={setMenu} menu={menu} />}
 
         {/* Queue Name form */}
         <div className={form ? styles.openForm : styles.closeForm}>

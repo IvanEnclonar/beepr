@@ -1,0 +1,16 @@
+.nav {
+    padding-left: 3px;
+}
+
+.container {
+    margin: 10px auto 0px;
+    height: 85vh;
+    width: 95%;
+    display: grid;
+    place-items: center;
+}
+
+.text {
+    font-size: 40px;
+    text-align: center;
+}
